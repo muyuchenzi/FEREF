@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="../JS/jquery-3.4.1.js"></script>
+    <title>Document</title>
+    <style>
+        div,
+        p,
+        span {
+            width: 240px;
+            height: 240px;
+            margin: 5px;
+            padding: 10px;
+            background: #aaa;
+            border: #000 1px solid;
+            float: left;
+            font-size: 17px;
+            font-family: Verdana;
+        }
+
+        div.mini {
+            width: 75px;
+            height: 75px;
+            background-color: #aaa;
+            font-size: 10px;
+            border: black 1px solid;
+        }
+
+        div.hide {
+            display: none;
+        }
+        span{
+            width: 240px;
+            height: 75px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="one" id="one">
+        id为one class为one的div
+        <div class="mini"> class 为mini</div>
+    </div>
+
+    <div class="one" id="two" title="test">
+        id为two class 为one title 为test
+        <div class="mini" title="other">class 为mini title为other</div>
+        <div class="mini" title="test">class 为mini title为test</div>
+    </div>
+
+    <div class="one">
+        <div class="mini">class 为mini</div>
+        <div class="mini">class 为mini</div>
+        <div class="mini">class 为mini</div>
+        <div class="mini"></div>
+    </div>
+
+    <div class="one">
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini">class为mini</div>
+        <div class="mini" title="tesst">class为mini ,title为tesst</div>
+    </div>
+
+    <div style="display: one;" class="none">
+        style的display 为“none”的div
+    </div>
+
+    <div class="hide">class 为hide的div</div>
+    
+    <div>
+        包含input的type为“hidden”的div <input type="hidden" size="8">
+    </div>
+    
+    <span id="mover">正在执行动画的span元素</span>
+
+
+    <div title="en">title为en的div元素</div>
+    <div title="en-UK">title为en-UK的div元素</div>
+    <div title="english">title为english的div元素</div>
+    <div title="en uk">title为en uk的div元素</div>
+    <div title="uken">title为uken的div元素</div>
+
+    <script>
+        /*1、根据id进行添加样式*/  
+
+        // $("#one").css("background","#bbffaa")
+        
+        /*2、改变class为mini的所有元素的背景色*/ 
+        
+        // $(".mini").css("background","#bbffaa")
+
+        /*3、改变所有div标签的背景色*/
+        
+        // $("div").css("background","#bbffaa")
+
+        // 4、改变所有元素的背景色
+        // $("*").css("background","#bbffaa")
+
+        // 5、改变所有的span元素和id为two的元素的背景色
+        // $("span, #two").css("background","#bbffaa")
+
+        // 6、层次选择器改变body 内所有div的颜色
+        // $("body div").css("background","#bbffaa")
+
+        // 7、改变父节点为body 子节点为div的颜色
+        // $("body>div").css("background","#bbffaa")
+
+        // 8、改变class为one 下一个div 同辈元素
+        // $("#one>div").css("background","#bbffaa")
+        // 9、
+
+        // $("div:first").css("background","#bbffaa")
+        // $("#two :first").css("background","#bbffaa")
+        // $("div:last").css("background","#bbffaa")
+        // $("div:last").css("background","#bbffaa")
+        // $("div:not(.one)").css("background","#bbffaa")
+        // $("div:even").css("background","#bbffaa")
+        // $("div:odd").css("background","#bbffaa")
+        // $("div:eq(1)").css("background","#bbffaa")
+        // $("div:gt(3)").css("background","#bbffaa")
+        // $("div:lt(3)").css("background","#bbffaa")
+        // $(":header").css("background","#bbffaa")
+        
+        // $(":animated").css("background","#bbffaa")
+        // $(":hover").css("background","#bbffaa")
+        // $(":focus").css("background","#bbffaa")
+        
+        
+        // $("div:contains(mini)").css("background","#bbffaa")
+        // $("div:empty").css("background","#bbffaa")
+        // $("div:has(.mini)").css("background","#bbffaa")
+        // $("div:parent").css("background","#bbffaa")
+        // $("div:visible").css("background","#bbffaa")
+        // $("div:hidden").show(1000)
+
+        // 属性
+
+
+        // $("div[title]").css("background","#bbffaa")
+        // $("div[title=test]").css("background","#bbffaa")
+        // $("div[title!=test]").css("background","#bbffaa")
+        // $("div[title^=te]").css("background","#bbffaa")
+        // $("div[title$=est]").css("background","#bbffaa")
+        // $("div[title*=st]").css("background","#bbffaa")
+        // $("div[id][title*=est]").css("background","#bbffaa")
+
+
+        // $("div[title^=en]").css("background","#bbffaa")
+        // $("div[title*=en]").css("background","#bbffaa")
+        // $("div[title=en]").css("background","#bbffaa")
+
+        // 子元素过滤器
+        // $("div.one :nth-child(2)").css("background","#bbffaa")
+        // $("div.one :first-child").css("background","#bbffaa")
+        // $("div.one :last-child").css("background","#bbffaa")
+        // $("div.one :only-child").css("background","#bbffaa")
+        // $("div[title]").css("background","#bbffaa")
+        // $("div[title]").css("background","#bbffaa")
+        console.log($("div[title=other]").attr("title"))
+
+
+    </script>
+</body>
+
+</html>
