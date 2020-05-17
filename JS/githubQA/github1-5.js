@@ -19,7 +19,7 @@ for (let i = 0; i < 3; i++) {
         console.log('this is settimeout')
         console.log(i)
     }, 10000)
-// }
+
 // 可以理解为
 function setTimeout(i){
     console.log(i)
