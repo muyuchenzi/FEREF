@@ -16,7 +16,6 @@ console.log(a==b)
 console.log(a===b)
 console.log(b===f)
 
-
 class Chameleon{
     static colorChange(newColor){
         this.newColor=newColor
